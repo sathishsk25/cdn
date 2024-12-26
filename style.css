@@ -1,3 +1,210 @@
+:root{
+    --text-color: #e8e2e2;
+    --theme-color: #f78653;
+    --color-bg: #fff;
+    --text-color: #606163;
+    --theme-color-black: #333;
+    --theme-color-black-2: #666;
+    --color-gray-1: #ddd;
+    --color-gray-2: #888;
+    --color-red-primary: #dd6352;
+    --color-green-primary: #0a936f;
+    --color-blue-primary: #0091ff;
+    --color-yellow-primary: #c3b02e;
+    --color-white-primary: #ddd;
+}
+
 body {
-  background: black;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-color-black);
+    color: var(--color-gray-1);
+    font-size: 0.8rem;
+    unicode-bidi: isolate;
+}
+
+div#rhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 10px;
+    padding: 0.75rem;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--text-color);
+    background: var(--theme-color-black);
+    font-size: 0.8rem;
+}
+
+div#rhead div {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+input#searchBar {
+    width: 17rem;
+    color: white;
+}
+
+div#rbody {
+    padding: 0.75rem;
+}
+
+.log-entry {
+    margin: 5px 0;
+}
+/* 
+span.level-i::before {
+    content: "\f06a";
+    font-family: 'Font Awesome\ 6 Free';
+    font-size: smaller;
+    margin-right: 3px;
+    font-weight: 900;
+} */
+
+/* span.level-i {
+    color: #167316;
+} */
+
+.cb {
+    align-items: center;
+    gap: 0.5rem;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cb.i:has(input[type="checkbox"]:checked) {
+    border-color: var(--color-green-primary);
+}
+
+.cb.i input[type="checkbox"]:checked {
+    border: 2px solid var(--color-green-primary);
+}
+
+.cb.i input[type="checkbox"]:checked::before {
+    background-color:  var(--color-green-primary);
+}
+
+
+.cb.s:has(input[type="checkbox"]:checked) {
+    border-color: var(--color-red-primary);
+}
+
+.cb.s input[type="checkbox"]:checked {
+    border: 2px solid var(--color-red-primary);
+}
+
+.cb.s input[type="checkbox"]:checked::before {
+    background-color:  var(--color-red-primary);
+}
+
+.cb.w:has(input[type="checkbox"]:checked) {
+    border-color: var(--color-yellow-primary);
+}
+
+.cb.w input[type="checkbox"]:checked {
+    border: 2px solid var(--color-yellow-primary);
+}
+
+.cb.w input[type="checkbox"]:checked::before {
+    background-color:  var(--color-yellow-primary);
+}
+
+.cb.s:has(input[type="checkbox"]:checked) {
+    border-color: var(--color-red-primary);
+}
+
+.cb.s input[type="checkbox"]:checked {
+    border: 2px solid var(--color-red-primary);
+}
+
+.cb.s input[type="checkbox"]:checked::before {
+    background-color:  var(--color-red-primary);
+}
+
+
+.cb.o:has(input[type="checkbox"]:checked) {
+    border-color: var(--color-white-primary);
+}
+
+.cb.o input[type="checkbox"]:checked {
+    border: 2px solid var(--color-white-primary);
+}
+
+.cb.o input[type="checkbox"]:checked::before {
+    background-color:  var(--color-white-primary);
+}
+
+input[type="checkbox"]:checked::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.other-container .search-cont,
+.other-container button {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+.cb-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.cb-container input {
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-cont {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+.search-cont > input{
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.level-i {
+    color: var(--color-green-primary);
+}
+
+.level-s {
+    color: var(--color-red-primary);
+}
+
+.level-w {
+    color: var(--color-yellow-primary);
+}
+
+i#downloadLogs {
+    cursor: pointer;
 }
